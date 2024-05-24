@@ -1,0 +1,6 @@
+@Covrage.API_HostAddress = http://localhost:5227
+
+GET {{Covrage.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
