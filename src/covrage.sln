@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covrage.API", "Covrage.API\Covrage.API.csproj", "{87B7755F-582D-4AE3-9C16-5BA77D96FFB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.API", "Example.API\Example.API.csproj", "{87B7755F-582D-4AE3-9C16-5BA77D96FFB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covrage.DependencyInjection", "Covrage.DependencyInjection\Covrage.DependencyInjection.csproj", "{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covrage", "Covrage\Covrage.csproj", "{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{87B7755F-582D-4AE3-9C16-5BA77D96FFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B7755F-582D-4AE3-9C16-5BA77D96FFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B7755F-582D-4AE3-9C16-5BA77D96FFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
