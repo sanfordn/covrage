@@ -4,5 +4,8 @@ namespace Example.API.Domain.Policies;
 
 public class AnnuityPolicy : Policy
 {
-    public string PolicyNumber { get; set; }
+    // Parameterless constructor for deserialization
+    public AnnuityPolicy() { }
+
+    public string PolicyOwner { get; set; }
 }

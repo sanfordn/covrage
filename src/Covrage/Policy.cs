@@ -7,12 +7,15 @@ namespace Covrage;
 // This abstract class represents a generic insurance policy.
 public abstract class Policy
 {
+    // Parameterless constructor for deserialization
+    public Policy() { }
+
     // The unique identifier for the policy.
-    protected string PolicyNumber { get; set; }
+    public string PolicyNumber { get; set; } = string.Empty;
     // The type of policy.
-    protected string PolicyType { get; set; }
+    public string? PolicyType { get; set; }
     // The policy effective date.
-    protected DateTime EffectiveDate { get; set; }
+    public DateTime EffectiveDate { get; set; }
     // The policy status.
-    protected string PolicyStatus { get; set; }
+    public string? PolicyStatus { get; set; }
 }

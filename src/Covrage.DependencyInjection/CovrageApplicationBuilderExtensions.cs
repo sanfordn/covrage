@@ -32,6 +32,8 @@ public static class CovrageApplicationBuilderExtensions
     public static IApplicationBuilder UseCovrage(this IApplicationBuilder app)
     {
         // Configure your Covrage middleware here
+        
+
 
         return app;
     }
