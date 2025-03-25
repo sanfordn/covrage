@@ -13,7 +13,7 @@ public abstract class Policy
     // The unique identifier for the policy.
     public string PolicyNumber { get; set; } = string.Empty;
     // The type of policy.
-    public string? PolicyType { get; set; }
+    public abstract string? PolicyType { get; set; }
     // The policy effective date.
     public DateTime EffectiveDate { get; set; }
     // The policy status.

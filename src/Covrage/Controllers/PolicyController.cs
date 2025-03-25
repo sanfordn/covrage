@@ -1,33 +1,31 @@
-﻿using Covrage;
-using Example.API.Domain.Policies;
-using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using Example.API.ModelBinders;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Example.API.Controllers;
+namespace Covrage.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class PolicyController : ControllerBase
 {
     private readonly IPolicyIssuance _policyIssuance;
 
-    // Constructor for dependency injection
     public PolicyController(IPolicyIssuance policyIssuance)
     {
         _policyIssuance = policyIssuance;
     }
 
-    [HttpGet]
-    [Route("")]
+    [HttpGet("{policyNumber}")]
     public async Task<IActionResult> GetPolicy(string policyNumber)
     {
-        return Ok(await _policyIssuance.GetPolicyAsync(policyNumber));
+        var policy = await _policyIssuance.GetPolicyAsync(policyNumber);
+        if (policy == null)
+        {
+            return NotFound();
+        }
+        return Ok(policy);
     }
 
     [HttpPost]
-    [Route("")]
-    public async Task<IActionResult> IssuePolicy([FromBody][ModelBinder(BinderType = typeof(PolicyModelBinder))] Policy policy)
+    public async Task<IActionResult> IssuePolicy(Policy policy)
     {
         var result = await _policyIssuance.IssuePolicyAsync(policy);
         return CreatedAtAction(nameof(GetPolicy), new { policyNumber = result.PolicyNumber }, result);

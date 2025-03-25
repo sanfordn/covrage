@@ -1,4 +1,4 @@
-namespace Covrage.DependencyInjection;
+namespace Covrage.DependencyInjection.Configuration;
 
 public class PolicyAdministrationServicesConfiguration
 {
