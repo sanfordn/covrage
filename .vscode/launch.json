@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Docker: Launch API",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run",
+            "platform": "netCore",
+            "sourceFileMap": {
+                "/app": "${workspaceFolder}/src/Example.API"
+            },
+            "dockerOptions": {
+                "containerName": "example-api",
+                "dockerServerReadyAction": {
+                    "uriFormat": "http://localhost:8080",
+                    "action": "openExternally",
+                    "pattern": "Application started. Press Ctrl\\+C to shut down."
+                }
+            },
+            "pipeTransport": {
+                "pipeProgram": "docker",
+                "pipeArgs": [
+                    "exec",
+                    "-i",
+                    "example-api",
+                    "sh",
+                    "-c"
+                ],
+                "debuggerPath": "/vsdbg/vsdbg",
+                "pipeCwd": "${workspaceFolder}",
+                "quoteArgs": false
+            },
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}/src"
+            }
+        }
+    ]
+}
