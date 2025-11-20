@@ -1,17 +1,17 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covrage.DependencyInjection", "Covrage.DependencyInjection\Covrage.DependencyInjection.csproj", "{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covrage.DependencyInjection", "Covrage.DependencyInjection\Covrage.DependencyInjection.csproj", "{CF60DE35-0E6A-425A-9AC3-AC9DCDE6FF6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covrage", "Covrage\Covrage.csproj", "{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Covrage", "Covrage\Covrage.csproj", "{05B7B7C0-E3D8-4115-AC6D-6508D4BCC327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.API", "Example.API\Example.API.csproj", "{32B37E8F-FF9F-6A29-B8BA-C33974B177E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example.API", "Example.API\Example.API.csproj", "{32B37E8F-FF9F-6A29-B8BA-C33974B177E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "covrage.AppHost", "covrage.AppHost\covrage.AppHost.csproj", "{1731A63A-A70C-4D6A-9A52-834DB2907FAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "covrage.AppHost", "covrage.AppHost\covrage.AppHost.csproj", "{1731A63A-A70C-4D6A-9A52-834DB2907FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "covrage.ServiceDefaults", "covrage.ServiceDefaults\covrage.ServiceDefaults.csproj", "{AA71C7BD-0F55-969E-6A7E-763B81C008B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "covrage.ServiceDefaults", "covrage.ServiceDefaults\covrage.ServiceDefaults.csproj", "{AA71C7BD-0F55-969E-6A7E-763B81C008B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

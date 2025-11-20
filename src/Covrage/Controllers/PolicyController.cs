@@ -4,14 +4,9 @@ namespace Covrage.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PolicyController : ControllerBase
+public class PolicyController(IPolicyIssuance policyIssuance) : ControllerBase
 {
-    private readonly IPolicyIssuance _policyIssuance;
-
-    public PolicyController(IPolicyIssuance policyIssuance)
-    {
-        _policyIssuance = policyIssuance;
-    }
+    private readonly IPolicyIssuance _policyIssuance = policyIssuance;
 
     [HttpGet("{policyNumber}")]
     public async Task<IActionResult> GetPolicy(string policyNumber)

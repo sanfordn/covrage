@@ -1,6 +1,6 @@
-﻿namespace Covrage.DependencyInjection
+﻿namespace Covrage.DependencyInjection;
+
+public class SqlPolicyDatabase
 {
-    internal class SqlPolicyDatabase
-    {
-    }
 }
+
