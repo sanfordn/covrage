@@ -1,4 +1,4 @@
-﻿using Covrage;
+﻿using Covrage.Domain.Policies;
 
 namespace Example.API.Models
 {

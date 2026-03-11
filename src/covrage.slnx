@@ -1,0 +1,14 @@
+<Solution>
+  <Project Path="../tests/Covrage.API.Tests/Covrage.API.Tests.csproj" />
+  <Project Path="../tests/Covrage.Application.Tests/Covrage.Application.Tests.csproj" />
+  <Project Path="../tests/Covrage.Domain.Tests/Covrage.Domain.Tests.csproj" />
+  <Project Path="../tests/Covrage.Infrastructure.Tests/Covrage.Infrastructure.Tests.csproj" />
+  <Project Path="Covrage.API/Covrage.API.csproj" />
+  <Project Path="covrage.AppHost/covrage.AppHost.csproj" />
+  <Project Path="Covrage.Application/Covrage.Application.csproj" />
+  <Project Path="Covrage.DependencyInjection/Covrage.DependencyInjection.csproj" />
+  <Project Path="Covrage.Domain/Covrage.Domain.csproj" />
+  <Project Path="Covrage.Infrastructure/Covrage.Infrastructure.csproj" />
+  <Project Path="covrage.ServiceDefaults/covrage.ServiceDefaults.csproj" />
+  <Project Path="Example.API/Example.API.csproj" />
+</Solution>

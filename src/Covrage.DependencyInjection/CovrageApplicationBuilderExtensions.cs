@@ -1,4 +1,11 @@
 using Covrage.DependencyInjection.Configuration;
+using Covrage.Application.Underwriting;
+using Covrage.Application.Billing;
+using Covrage.Application.Issuance;
+using Covrage.Infrastructure;
+using Covrage.Infrastructure.Underwriting;
+using Covrage.Infrastructure.Billing;
+using Covrage.Infrastructure.Issuance;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
@@ -28,12 +35,9 @@ public static class CovrageApplicationBuilderExtensions
         configure?.Invoke(infrastructureConfiguration);
 
         // Register default infrastructure if they haven't been overridden
-
-        // if we're debugging, use the in-memory policy database
-        if (Debugger.IsAttached)
-            infrastructureConfiguration.PolicyRepositoryType ??= typeof(InMemoryPolicyDatabase);
-        else
-            infrastructureConfiguration.PolicyRepositoryType ??= typeof(SqlPolicyDatabase);
+        
+        // Use in-memory policy database by default
+        infrastructureConfiguration.PolicyRepositoryType ??= typeof(InMemoryPolicyDatabase);
         infrastructureConfiguration.PolicyNumberFactoryType ??= typeof(RandomPolicyNumberFactory);
 
         services.AddPolicyAdministrationInfrastructure(infrastructureConfiguration);

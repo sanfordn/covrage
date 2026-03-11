@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Covrage.Infrastructure</AssemblyName>
+    <RootNamespace>Covrage.Infrastructure</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Covrage.Domain\Covrage.Domain.csproj" />
+    <ProjectReference Include="..\Covrage.Application\Covrage.Application.csproj" />
+  </ItemGroup>
+</Project>

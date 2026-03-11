@@ -3,32 +3,27 @@ using Covrage.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
-// Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddOpenApi();
 builder.Services.AddCovrageServices();
 builder.Services.AddCovrageInfrastructure();
+builder.Services.AddCovrageApi();
 
 var app = builder.Build();
 
 app.UseCovrage();
+app.MapCovrageApi();
 
 app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.MapOpenApi();
+app.UseSwaggerUI(options =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    options.SwaggerEndpoint("/openapi/v1.json", "Covrage API v1");
+});
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
 
 app.Run();

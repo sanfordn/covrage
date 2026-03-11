@@ -1,5 +1,9 @@
 
 using Covrage.DependencyInjection.Configuration;
+using Covrage.Application.Underwriting;
+using Covrage.Application.Billing;
+using Covrage.Application.Issuance;
+using Covrage.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Covrage.DependencyInjection;
